@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World B from TestRepo2
-        run: echo "Hello World B"
+        run: exit 1
 
