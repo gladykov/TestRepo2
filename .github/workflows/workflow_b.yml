@@ -12,7 +12,9 @@ jobs:
   Jobs-B:
     name: Job B
     runs-on: ubuntu-latest
+    env:
+      TRIGGERING_REPOSITORY: ${{ github.action_repository }}
     steps:
       - name: Hello World B from TestRepo2
-        run: echo '${{ github.action_repository }}'
+        run: echo $TRIGGERING_REPOSITORY
 
