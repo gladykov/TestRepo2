@@ -24,6 +24,9 @@ jobs:
       - name: Show me
         run: |
           ls
-          ls common
+          echo "-----"
+          ls common/.github/workflows
+          echo "-----"
+          pwd
       - name: Run action from private repo
         uses: ./common/.github/workflows/prepare_common_repo.yml
