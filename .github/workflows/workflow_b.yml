@@ -22,5 +22,5 @@ jobs:
           repository: gladykov/TestRepo
           path: common
       - name: Run action from private repo
-        workdir: common
+        working-directory: common
         uses: ./.github/prepare_common_repo.yml
