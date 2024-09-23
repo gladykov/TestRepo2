@@ -12,6 +12,9 @@ jobs:
   Jobs-B:
     name: Job B
     runs-on: ubuntu-latest
+    env:
+      TRIGGERING_REPOSITORY: ${{ github.action_repository }}
+      TRIGGERING_EVENT_REPOSITORY: ${{ github.event.repository.name }}
     steps:
       - name: Check out common code
         uses: actions/checkout@v4
