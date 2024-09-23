@@ -26,4 +26,4 @@ jobs:
           ls
           ls common
       - name: Run action from private repo
-        uses: ./common/.github/prepare_common_repo.yml
+        uses: ./common/.github/workflows/prepare_common_repo.yml
