@@ -33,5 +33,7 @@ jobs:
           ls common/.github/workflows
           echo "-----"
           pwd
-      - name: Run action from private repo
+      - name: Run action from private repo 1
+        uses: ./common/.github/install_tsx
+      - name: Run action from private repo 2
         uses: ./common/.github/check_branch_name
