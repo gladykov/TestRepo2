@@ -15,4 +15,7 @@ jobs:
     steps:
       - name: Hello World B from TestRepo2
         run: exit 1
+      - name: try composite
+        uses: gladykov/TestRepo/.github/workflows/prepare_common_repo.yml@main
+        secrets: inherit
 
