@@ -13,9 +13,9 @@ jobs:
     name: Job B
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World B from TestRepo2
-        run: exit 1
-      - name: try composite
-        uses: gladykov/TestRepo/.github/workflows/prepare_common_repo.yml@main
-        secrets: inherit
-
+      - name: Check out common code
+        uses: actions/checkout@v4
+        repository: gladykov/TestRepo2
+        path: common
+      - name: Run action from private repo
+        uses: ./.github/prepare_common_repo.yml
