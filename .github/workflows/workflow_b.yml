@@ -18,7 +18,8 @@ jobs:
     steps:
       - name: Check out common code
         uses: actions/checkout@v4
-        repository: "gladykov/TestRepo"
-        path: "common"
+        with:
+          repository: "gladykov/TestRepo"
+          path: "common"
       - name: Run action from private repo
         uses: ./.github/prepare_common_repo.yml
